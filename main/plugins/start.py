@@ -48,8 +48,8 @@ async def start(event):
                       buttons=[
                               [Button.inline("SET THUMB.📸", data="set"),
                                Button.inline("REM THUMB.📸", data="rem")]
-                               Button.inline("Channel", data="set"),
-                               Button.inline("Group", data="rem")]
+                               Button.inline("Channel", url="t.me/ChotuBots"),
+                               Button.inline("Group", url="t.me/ChotuMovies")]
                               [Button.url("Developer", url="t.me/PiroChotu")]])
     '''
     await event.reply(text, 
