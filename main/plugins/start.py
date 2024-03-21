@@ -44,7 +44,7 @@ async def remt(event):
   
 @Drone.on(events.NewMessage(incoming=True, pattern=f"{S}"))
 async def start(event):
-    text = "**🔰 Welcome To Dynamic Saver Bot 💞\n\nSend me Link of any message to clone it here, For private channel message, send invite link first.\n\n**Need any help ? Click 👉 Support**"
+    text = "**🔰 Welcome To Dynamic Saver Bot 💞\n\nSend me Link of any message to clone it here, For private channel message, send invite link first.\n\nSET THUMB.📸 - Set a thumbnail\nREM THUMB.📸 - Remove Thumbnail\n\nNeed any help ? Click 👉 Support**"
     #await start_srb(event, text)
     await event.reply(text, 
                       buttons=[
