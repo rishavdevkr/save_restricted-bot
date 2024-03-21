@@ -52,7 +52,7 @@ async def progress_for_pyrogram(
             round(percentage, 2),
         )
 
-        tmp = progress + "**📈GROSSS: {0} of {1}\n\n🚀Speed: {2}/s\n\n🧲ETA: {3}\n\n🤖ʙᴏᴛ ᴍᴀᴅᴇ ʙʏ 𝘿𝙮𝙣𝙖𝙢𝙞𝙘 𝘽𝙤𝙩𝙨**".format(
+        tmp = progress + "**📈GROSSS: {0} of {1}\n\n🚀Speed: {2}/s\n\n🧲ETA: {3}\n\n🤖ʙᴏᴛ ᴍᴀᴅᴇ ʙʏ [Cʜᴏᴛᴜ](https://t.me/PiroChotu)**".format(
             humanbytes(current),
             humanbytes(total),
             humanbytes(speed),
