@@ -1,11 +1,9 @@
 #Github.com/Vasusen-code
 
 import os
-from .. import bot as Drone
 from telethon import events, Button
+from your_module_path import bot as Drone  # Adjust the module path accordingly
 
-#from ethon.mystarts import start_srb
-    
 S = '/' + 's' + 't' + 'a' + 'r' + 't'
 
 @Drone.on(events.callbackquery.CallbackQuery(data="set"))
@@ -19,9 +17,11 @@ async def sett(event):
         x = await conv.get_reply()
         if not x.media:
             xx.edit("**No media found.📸**")
+            return
         mime = x.file.mime_type
         if 'png' not in mime and 'jpg' not in mime and 'jpeg' not in mime:
-            return await xx.edit("**No image found.**")
+            await xx.edit("**No image found.**")
+            return
         await xx.delete()
         t = await event.client.send_message(event.chat_id, '**Trying...**')
         path = await event.client.download_media(x.media)
@@ -42,20 +42,11 @@ async def remt(event):
   
 @Drone.on(events.NewMessage(incoming=True, pattern=f"{S}"))
 async def start(event):
-    text = "**Send me Link of any message to clone it here, For private channel message, send invite link first.\n\n**SUPPORT: t.me/+UwkDHFPuRMRkMmI1 👈** **"
-    #await start_srb(event, text)
+    text = "**Send me Link of any message to clone it here, For private channel message, send invite link first.\n\n**SUPPORT: t.me/+UwkDHFPuRMRkMmI1 👈**"
     await event.reply(text, 
                       buttons=[
-                              [Button.inline("SET THUMB.📸", data="set"),
-                               Button.inline("REM THUMB.📸", data="rem")]
-                              [Button.inline("Channel", url="t.me/ChotuBots"),
-                               Button.inline("Group", url="t.me/ChotuMovies")]
-                              [Button.url("Developer", url="t.me/PiroChotu")]])
-    '''
-    await event.reply(text, 
-                      buttons=[
-                              [Button.inline("SET THUMB.📸", data="set"),
-                               Button.inline("REM THUMB.📸", data="rem")],
-                              [Button.url("Maintained by", url="t.me/DynamicBots")]])
-    '''
-    
+                          [Button.inline("SET THUMB.📸", data="set"),
+                           Button.inline("REM THUMB.📸", data="rem")],
+                          [Button.inline("Channel", url="t.me/ChotuBots"),
+                           Button.inline("Group", url="t.me/ChotuMovies")],
+                          [Button.url("Developer", url="t.me/PiroChotu")]])
