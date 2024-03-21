@@ -44,13 +44,15 @@ async def remt(event):
   
 @Drone.on(events.NewMessage(incoming=True, pattern=f"{S}"))
 async def start(event):
-    text = "**🔰 Welcome To Dynamic Saver Bot 💞\n\nSend me Link of any message to clone it here, For private channel message, send invite link first.\n\n**SUPPORT: t.me/+UwkDHFPuRMRkMmI1 👈**"
+    text = "**🔰 Welcome To Dynamic Saver Bot 💞\n\nSend me Link of any message to clone it here, For private channel message, send invite link first.\n\n**Need any help ? Click 👉 Support**"
     #await start_srb(event, text)
     await event.reply(text, 
                       buttons=[
                               [Button.inline("SET THUMB.📸", data="set"),
                                Button.inline("REM THUMB.📸", data="rem")],
-                              [Button.url("Developer", url="t.me/PiroChotu")]
+                              [Button.url("Updates ⚡", url="https://t.me/ChotuBots"),
+                               Button.url("Support 💌", url="http://t.me/+UwkDHFPuRMRkMmI1")],
+                              [Button.url("Developer 🧑‍💻", url="t.me/PiroChotu")]
                               ])
     '''
     await event.reply(text, 
