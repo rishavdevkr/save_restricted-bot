@@ -1,8 +1,8 @@
 #Github.com/Vasusen-code
 
 import os
-from telethon import events, Button
-from your_module_path import bot as Drone  # Adjust the module path accordingly
+from .. import bot as Drone
+from telethon import events, Button  # Adjust the module path accordingly
 
 S = '/' + 's' + 't' + 'a' + 'r' + 't'
 
