@@ -3,7 +3,7 @@
 # Contact me on Telegram @PiroChotu
 
  
-#deploy on heroku
+#deploy on Heroku
 
 
 <a href="https://heroku.com/deploy?template=https://github.com/Vishesh-Dhiman/Save-Content-Bot">
